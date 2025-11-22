@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects | FZM Renovations</title>
+    <meta name="description"
+        content="Explore our portfolio of luxury renovations in Markham. Kitchens, bathrooms, basements, and more.">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html"><img src="assets/images/logo-gold.png" alt="FZM Renovations"></a>
+                </div>
+                <div class="mobile-menu-btn">☰</div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="projects.html" class="active">Projects</a>
+                    <a href="contact.html">Contact</a>
+
+                    <a href="estimators.html">Estimators</a>
+                    <a href="tel:+15551234567" class="btn" data-content="phone">Call Us</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section-padding" style="background-color: var(--color-black); color: white; text-align: center;">
+        <div class="container">
+            <h1>Our Masterpieces</h1>
+            <p>A showcase of our finest work across the GTA.</p>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="kitchens">Kitchens</button>
+                <button class="filter-btn" data-filter="bathrooms">Bathrooms</button>
+                <button class="filter-btn" data-filter="basements">Basements</button>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Content injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>FZM Renovations</h4>
+                    <p>Transforming homes across Markham and the GTA with precision and care.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html">Our Work</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="catalog.html">Client Portal</a></li>
+                        <li><a href="estimators.html">Estimators</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li data-content="location"></li>
+                        <li><a href="#" data-content="phone"></a></li>
+                        <li><a href="#" data-content="email"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2024 FZM Renovations. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="floating-cta">
+        <span>📞</span> Call Now
+    </a>
+
+    <script src="assets/js/site-data.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>

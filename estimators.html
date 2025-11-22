@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estimators | FZM Renovations</title>
+    <meta name="description"
+        content="Get an instant cost estimate for your basement renovation project with FZM Renovations.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .estimator-tabs {
+            display: flex;
+            gap: 12px;
+            margin-bottom: var(--spacing-md);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 16px 32px;
+            background-color: #fff;
+            border: 2px solid #d1d5db;
+            color: var(--color-black);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 16px;
+            border-radius: 8px;
+            transition: var(--transition-fast);
+        }
+
+        .tab-btn:hover {
+            background-color: #f9fafb;
+        }
+
+        .tab-btn.active {
+            background-color: var(--color-gold);
+            color: white;
+            border-color: var(--color-gold);
+        }
+
+        .estimator-content {
+            display: none;
+        }
+
+        .estimator-content.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html"><img src="assets/images/logo-gold.png" alt="FZM Renovations"></a>
+                </div>
+                <div class="mobile-menu-btn">☰</div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="contact.html">Contact</a>
+
+                    <a href="estimators.html" class="active">Estimators</a>
+                    <a href="tel:+15551234567" class="btn" data-content="phone">Call Us</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section-padding">
+        <div class="container estimator-wrapper">
+
+            <h1 class="text-center">Renovation Estimators</h1>
+            <p class="text-center" style="margin-bottom: var(--spacing-lg);">Get a preliminary estimate for your
+                renovation project.</p>
+
+            <!-- Tabs -->
+            <div class="estimator-tabs">
+                <button class="tab-btn active" data-tab="basement">Basement Estimator</button>
+                <button class="tab-btn" data-tab="bathroom">3pc Bathroom Estimator</button>
+                <button class="tab-btn" data-tab="powder">Powder Room Estimator</button>
+            </div>
+
+            <!-- Basement Estimator -->
+            <div id="basement-estimator" class="estimator-content active">
+                <div id="loading-modal-basement" class="loading-overlay">
+                    <div class="spinner"></div>
+                    <span>Loading data...</span>
+                </div>
+
+                <div class="estimator-header">
+                    <div class="estimator-title">Cost Estimate</div>
+                    <div class="estimator-total" id="total-price-basement">$0.00</div>
+                </div>
+
+                <form id="quote-form-basement">
+                    <div id="dynamic-questions-container-basement"></div>
+
+                    <div class="total-box-footer">
+                        <span class="total-label">Estimated Total:</span>
+                        <span id="total-price-footer-basement" class="total-price-large">$0.00</span>
+
+                        <p id="disclaimer-text-container-basement"
+                            style="font-size: 0.8rem; color: #666; margin-top: 1rem; font-style: italic;"></p>
+
+                        <div class="estimator-actions">
+                            <button type="button" class="print-btn btn btn-secondary" data-estimator="basement"
+                                style="flex: 1;">
+                                Download PDF
+                            </button>
+                            <button type="button" class="open-contact-modal-btn btn" data-estimator="basement"
+                                style="flex: 1;">
+                                Request Formal Quote
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- 3pc Bathroom Estimator -->
+            <div id="bathroom-estimator" class="estimator-content">
+                <div id="loading-modal-bathroom" class="loading-overlay">
+                    <div class="spinner"></div>
+                    <span>Loading data...</span>
+                </div>
+
+                <div class="estimator-header">
+                    <div class="estimator-title">Cost Estimate</div>
+                    <div class="estimator-total" id="total-price-bathroom">$0.00</div>
+                </div>
+
+                <form id="quote-form-bathroom">
+                    <div id="dynamic-questions-container-bathroom"></div>
+
+                    <div class="total-box-footer">
+                        <span class="total-label">Estimated Total:</span>
+                        <span id="total-price-footer-bathroom" class="total-price-large">$0.00</span>
+
+                        <p id="disclaimer-text-container-bathroom"
+                            style="font-size: 0.8rem; color: #666; margin-top: 1rem; font-style: italic;"></p>
+
+                        <div class="estimator-actions">
+                            <button type="button" class="print-btn btn btn-secondary" data-estimator="bathroom"
+                                style="flex: 1;">
+                                Download PDF
+                            </button>
+                            <button type="button" class="open-contact-modal-btn btn" data-estimator="bathroom"
+                                style="flex: 1;">
+                                Request Formal Quote
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Powder Room Estimator -->
+            <div id="powder-estimator" class="estimator-content">
+                <div id="loading-modal-powder" class="loading-overlay">
+                    <div class="spinner"></div>
+                    <span>Loading data...</span>
+                </div>
+
+                <div class="estimator-header">
+                    <div class="estimator-title">Cost Estimate</div>
+                    <div class="estimator-total" id="total-price-powder">$0.00</div>
+                </div>
+
+                <form id="quote-form-powder">
+                    <div id="dynamic-questions-container-powder"></div>
+
+                    <div class="total-box-footer">
+                        <span class="total-label">Estimated Total:</span>
+                        <span id="total-price-footer-powder" class="total-price-large">$0.00</span>
+
+                        <p id="disclaimer-text-container-powder"
+                            style="font-size: 0.8rem; color: #666; margin-top: 1rem; font-style: italic;"></p>
+
+                        <div class="estimator-actions">
+                            <button type="button" class="print-btn btn btn-secondary" data-estimator="powder"
+                                style="flex: 1;">
+                                Download PDF
+                            </button>
+                            <button type="button" class="open-contact-modal-btn btn" data-estimator="powder"
+                                style="flex: 1;">
+                                Request Formal Quote
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="modal-overlay hidden">
+        <div class="modal-card">
+            <span id="close-contact-modal-btn" class="modal-close">&times;</span>
+            <h2>Request Formal Quote</h2>
+            <p style="margin-bottom: 1rem; color: #666;">Your selections will be sent with your request.</p>
+
+            <form id="contact-form" class="contact-form" action="https://formspree.io/f/mankeljl" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="address">Project Address</label>
+                <input type="text" id="address" name="address">
+
+                <textarea name="selections_summary" id="modal-selections" style="display: none;"></textarea>
+
+                <button type="submit" class="btn" style="width: 100%;">Send Request</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>FZM Renovations</h4>
+                    <p>Transforming homes across Markham and the GTA with precision and care.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html">Our Work</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="catalog.html">Client Portal</a></li>
+                        <li><a href="estimators.html">Estimators</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li data-content="location"></li>
+                        <li><a href="#" data-content="phone"></a></li>
+                        <li><a href="#" data-content="email"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2024 FZM Renovations. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="assets/js/site-data.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/estimators.js"></script>
+</body>
+
+</html>

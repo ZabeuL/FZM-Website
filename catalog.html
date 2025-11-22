@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Catalog | FZM Renovations</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- jsPDF CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html"><img src="assets/images/logo-gold.png" alt="FZM Renovations"></a>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="contact.html">Contact</a>
+
+                    <a href="estimators.html">Estimators</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="catalog-header">
+        <div class="container">
+            <h1>Client Selection Portal</h1>
+            <p>Browse our curated selection of materials and finishes for your project.</p>
+        </div>
+    </div>
+
+    <section class="section-padding">
+        <div class="container">
+            <div id="product-grid" class="catalog-grid">
+                <!-- Products injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <div class="cart-widget">
+        <h3>Quote Estimate</h3>
+        <ul id="cart-items">
+            <!-- Cart items injected by JS -->
+        </ul>
+        <div style="margin-top: 1rem; font-weight: bold; border-top: 2px solid #eee; padding-top: 0.5rem;">
+            Total: $<span id="cart-total">0.00</span>
+        </div>
+        <button id="generate-pdf" class="btn" style="width: 100%; margin-top: 1rem;">Generate PDF Quote</button>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="copyright">
+                &copy; 2024 FZM Renovations. Private Client Portal.
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/catalog.js"></script>
+</body>
+
+</html>
